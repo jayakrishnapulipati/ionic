@@ -1,6 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+
+  <ion-buttons start>
+
+  <button ion-button  item-right icon-right class="btn" (click)="dismiss()">
+    Cancel
+  </button>
+
+
+</ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
 <ion-tabs>
   <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
   <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
   <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
   <ion-tab [root]="tab4Root" tabTitle="Settings" tabIcon="construct"></ion-tab>
 </ion-tabs>
+</ion-content>

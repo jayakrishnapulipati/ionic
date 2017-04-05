@@ -1,0 +1,133 @@
+
+      <ion-header>
+        <ion-navbar>
+          <ion-buttons start>
+            <button ion-button icon-only>
+              <ion-icon name="contact"></ion-icon>
+            </button>
+          </ion-buttons>
+          <ion-buttons end>
+            <button ion-button icon-only>
+              <ion-icon name="search"></ion-icon>
+            </button>
+          </ion-buttons>
+        </ion-navbar>
+      </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          Left Icon Button
+          <button ion-button outline item-right icon-left>
+            <ion-icon name="star"></ion-icon>
+            Left Icon
+          </button>
+        </ion-item>
+        <ion-item>
+          Right Icon Button
+          <button ion-button outline item-right icon-right>
+            <ion-icon name="star"></ion-icon>
+            Right Icon
+          </button></ion-item>
+        <ion-item>
+          Inner Icon Button
+          <button ion-button outline item-right>
+            Outline
+          </button>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+
+        <ion-item>
+          <ion-label fixed>Username</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label fixed>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <button (click)="signup()">SignUP</button>
+      </ion-list>
+      <button (click)="showAlert()">Show Alert</button>
+      <button (click)="presentActionSheet()">ActionSheet</button>
+      <button (click)=" presentModal()">Modal</button>
+      <ion-item>
+        <ion-icon name="logo-twitter" item-left></ion-icon>
+        Followers
+        <ion-badge item-right color="secondary">260k</ion-badge>
+      </ion-item>
+
+      <ion-slides pager>
+
+        <ion-slide style="background-color: green">
+          <h2>Slide 1</h2>
+        </ion-slide>
+
+        <ion-slide style="background-color: blue">
+          <h2>Slide 2</h2>
+        </ion-slide>
+
+        <ion-slide style="background-color: red">
+          <h2>Slide 3</h2>
+        </ion-slide>
+
+      </ion-slides>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of items1">
+          {{ item }}
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Gaming</ion-label>
+          <ion-select [(ngModel)]="gaming">
+            <ion-option value="nes">NES</ion-option>
+            <ion-option value="n64">Nintendo64</ion-option>
+            <ion-option value="ps">PlayStation</ion-option>
+            <ion-option value="genesis">Sega Genesis</ion-option>
+            <ion-option value="saturn">Sega Saturn</ion-option>
+            <ion-option value="snes">SNES</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+<ion-list>
+  <ion-item>
+    <ion-select [(ngModel)]="month">
+      <ion-option value="jan">January</ion-option>
+      <ion-option value="feb">February</ion-option>
+      <ion-option value="mar">March</ion-option>
+      <ion-option value="apr">April</ion-option>
+      <ion-option value="may">May</ion-option>
+      <ion-option value="jun">June</ion-option>
+      <ion-option value="july">July</ion-option>
+      <ion-option value="augst">August</ion-option>
+      <ion-option value="sep">September</ion-option>
+      <ion-option value="oct">october</ion-option>
+      <ion-option value="nov">November</ion-option>
+      <ion-option value="dec">December</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-select [(ngModel)]="year">
+      <ion-option value="1">1989</ion-option>
+      <ion-option value="2">1990</ion-option>
+      <ion-option value="3">1991</ion-option>
+      <ion-option value="4">1992</ion-option>
+      <ion-option value="5">1993</ion-option>
+      <ion-option value="6">1994</ion-option>
+      <ion-option value="7">1995</ion-option>
+      <ion-option value="8">1996</ion-option>
+      <ion-option value="9">1997</ion-option>
+      <ion-option value="10">1998</ion-option>
+      <ion-option value="11">1999</ion-option>
+      <ion-option value="12">2000</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+    </ion-content>
+
+
